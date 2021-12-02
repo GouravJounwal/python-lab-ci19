@@ -26,16 +26,59 @@ string = "my phone number is : 121212 !!"
 print("\nExtracted digits") 
 numbers = [x for x in string if x.isdigit()] 
 print (numbers) 
- #A list comprehension generally consist of these parts :
-
-#1.Output expression,
-#2.Input sequence,
-#3.A variable representing a member of the input sequence and
-#4.An optional predicate part. 
-#A list of list for multiplication table 
-a = 7
-table = [[a, b, a * b] for b in range(1, 11)] 
+ 
   
-print("\nMultiplication Table") 
+  1. Python program to insert a number to given position in a list.
 
-    print (i) 
+x=[1,2,3,4,5,7,8,9]
+
+pos=5
+
+x.insert(pos,6)   #insert 6 after 5th postion
+print(x)
+
+output -: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+2.  Python program to delete an element from a list by index which is given by the user.
+In [18]:
+x=[1,2,3,4,5,62,6,7,8,9]
+
+delete=5
+
+del x[delete]    #delete 5th element in list
+print(x)
+
+output-: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+3. list for lowering the characters 
+
+print ([x.lower() for x in ["A","B","C","G"]] )
+
+output-: ['a', 'b', 'c', 'g']
+4.  list which extracts number 
+
+string = "my phone number is : 121212 !!"
+  
+print("\nExtracted digits") 
+numbers = [x for x in string if x.isdigit()] 
+print (numbers)
+
+output-: Extracted digits
+['1', '2', '1', '2', '1', '2']
+
+
+5. .Write a Python program to find all the values in a list are greater than a given number.
+
+x=[1,2,3,4,5,6,7,8,9]
+
+x.sort()
+num=5
+
+i=x.index(num)
+
+print(x[i+1:])
+
+output-: [6, 7, 8, 9]
+ 
+
